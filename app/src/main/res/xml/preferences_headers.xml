@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+    <header
+        android:fragment="qc.browser.light.settings.fragment.GeneralSettingsFragment"
+        android:title="@string/settings_general"/>
+    <header
+        android:fragment="qc.browser.light.settings.fragment.BookmarkSettingsFragment"
+        android:title="@string/bookmark_settings"/>
+    <header
+        android:fragment="qc.browser.light.settings.fragment.DisplaySettingsFragment"
+        android:title="@string/settings_display"/>
+    <header
+        android:fragment="qc.browser.light.settings.fragment.PrivacySettingsFragment"
+        android:title="@string/settings_privacy"/>
+    <header
+        android:fragment="qc.browser.light.settings.fragment.AdvancedSettingsFragment"
+        android:title="@string/settings_advanced"/>
+</preference-headers>

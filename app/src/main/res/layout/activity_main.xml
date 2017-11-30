@@ -1,0 +1,162 @@
+<!-- Copyright 2014 ACR Development -->
+<RelativeLayout android:id="@+id/coordinator_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".browser.activity.BrowserActivity"
+    xmlns:ads="http://schemas.android.com/apk/res-auto">
+
+        <android.support.v4.widget.DrawerLayout
+            android:id="@+id/drawer_layout"
+            android:layout_width="match_parent"
+            android:layout_above="@+id/bootomview"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <RelativeLayout
+                android:id="@+id/ui_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rlToolbar"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content">
+
+                    <include layout="@layout/toolbar"/>
+                </RelativeLayout>
+
+                <include layout="@layout/browser_content"/>
+
+                <include layout="@layout/search_interface"/>
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/left_drawer"
+                android:layout_width="@dimen/navigation_width"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:background="?attr/drawerBackground"
+                android:fitsSystemWindows="true"
+                android:weightSum="1"/>
+
+            <FrameLayout
+                android:id="@+id/right_drawer"
+                android:layout_width="@dimen/navigation_width"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:background="?attr/drawerBackground"
+                android:fitsSystemWindows="true"
+                android:weightSum="1"/>
+
+        </android.support.v4.widget.DrawerLayout>
+
+
+    <LinearLayout
+        android:id="@+id/bootomview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@+id/bottom_layout"
+            android:background="#595959" />
+
+        <LinearLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/off_white"
+            android:visibility="visible"
+            android:weightSum="5">
+
+            <RelativeLayout
+                android:id="@+id/backword_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_pressed"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerInParent="true"
+                    android:background="@mipmap/backword_icon" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/forward_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_pressed"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerInParent="true"
+                    android:background="@mipmap/forward_icon" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/general_setting_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerInParent="true"
+                    android:background="@mipmap/icon_setting" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/home_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_pressed"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="27dp"
+                    android:layout_height="25dp"
+                    android:layout_centerInParent="true"
+                    android:background="@mipmap/home_icon" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/refresh_layout"
+                android:layout_width="0dp"
+                android:onClick="ReloadCurrentTab"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_pressed"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerInParent="true"
+                    android:background="@mipmap/refresh_icon" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

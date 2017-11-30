@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/menu_icons_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:visibility="visible"
+            card_view:cardBackgroundColor="@color/white"
+            card_view:cardCornerRadius="2dp"
+            card_view:cardElevation="1dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <LinearLayout
+                    android:id="@+id/first_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/second_layout"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+
+                    <RelativeLayout
+                        android:id="@+id/pc_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+
+                        <ImageView
+                            android:id="@+id/iv_pc_view"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@mipmap/pc_view" />
+
+                        <TextView
+                            android:id="@+id/pcview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv_pc_view"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="PC View"
+                            android:textSize="13sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/bookmark_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+
+                        <ImageView
+                            android:id="@+id/iv_bookmark"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@mipmap/bookmark" />
+
+                        <TextView
+                            android:id="@+id/bookmark"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv_bookmark"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="Book Mark"
+                            android:textSize="13sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/history_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/iv_history"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@mipmap/history" />
+
+                        <TextView
+                            android:id="@+id/history"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv_history"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="History"
+                            android:textSize="13sp" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/second_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/third_layout"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <RelativeLayout
+                        android:id="@+id/clear_history_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/iv_clear_history"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@mipmap/clear_history" />
+
+                        <TextView
+                            android:id="@+id/clearhistory"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv_clear_history"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="Clear History"
+                            android:textSize="13sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/download_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+
+                        <ImageView
+                            android:id="@+id/iv_download"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@mipmap/download" />
+
+                        <TextView
+                            android:id="@+id/downloads"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv_download"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="Download"
+                            android:textSize="13sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/share_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/iv_share"
+                            android:layout_width="40dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@mipmap/share" />
+
+                        <TextView
+                            android:id="@+id/share"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv_share"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="Share"
+                            android:textSize="13sp" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/third_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+
+                    <RelativeLayout
+                        android:id="@+id/setting_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/iv_general_Setting"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@mipmap/general_setting" />
+
+                        <TextView
+                            android:id="@+id/settings"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv_general_Setting"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="Settings"
+                            android:textSize="13sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/full_screen_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+
+                        <ImageView
+                            android:id="@+id/iv_full_screen"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@mipmap/full_screen" />
+
+                        <TextView
+                            android:id="@+id/fullscreen"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv_full_screen"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="Full Screen"
+                            android:textSize="13sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/exist_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/iv_exit"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@mipmap/exit" />
+
+                        <TextView
+                            android:id="@+id/exit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv_exit"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="Exit"
+                            android:textSize="13sp" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+</RelativeLayout>
